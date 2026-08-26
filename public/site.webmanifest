@@ -1,0 +1,28 @@
+{
+  "name": "King's Onward College",
+  "short_name": "KOC",
+  "description": "King's Onward College — Excellence in Education, Benin City, Edo State, Nigeria",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F1B2C",
+  "theme_color": "#0F1B2C",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
