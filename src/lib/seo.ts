@@ -31,11 +31,11 @@ export interface PageSEO {
 export const pages: Record<string, PageSEO> = {
   home: {
     title: "King's Onward College | Best School in Benin City, Edo State | Nursery, Primary & Secondary Education",
-    description: "King's Onward College is Benin City's premier private school offering exceptional Nursery, Primary, and Secondary education. 15+ years of excellence, 98% exam success rate. Enrollment open for 2025/2026 academic session!",
+    description: "King's Onward College is Benin City's premier private school offering exceptional Nursery, Primary, and Secondary education. 15+ years of excellence, 98% exam success rate. Admissions currently ongoing!",
     keywords: [
       "best school in Benin City", "King's Onward College", "Kings Onward College admission",
       "nursery primary secondary school Edo State", "top private school Nigeria",
-      "quality education Benin City", "school admission 2025 2026",
+      "quality education Benin City", "school admission currently ongoing",
       "WAEC NECO JAMB preparation school", "affordable private school Benin City",
       "school near me Benin City", "children education Nigeria",
       "best secondary school Edo State", "day school Benin City", "Christian school Benin City",
@@ -69,14 +69,14 @@ export const pages: Record<string, PageSEO> = {
     ogImage: "/og-academics.jpg",
   },
   admissions: {
-    title: "Admissions 2025/2026 | Apply Now | King's Onward College, Benin City",
-    description: "Apply for admission into King's Onward College for the 2025/2026 academic session. Nursery, Primary, and Secondary admissions now open. Affordable fees, world-class education in Benin City, Edo State.",
+    title: "Admissions Currently Ongoing | Apply Now | King's Onward College, Benin City",
+    description: "Apply for admission into King's Onward College. Nursery, Primary, and Secondary admissions currently ongoing. Affordable fees, world-class education in Benin City, Edo State.",
     keywords: [
-      "admission 2025 2026 Benin City", "school admission form Edo State",
+      "school admission Benin City", "school admission form Edo State",
       "enroll child school Nigeria", "private school fees Benin City",
       "school admission process Nigeria", "best school admission Edo State",
       "affordable private school Benin City", "King's Onward College admission",
-      "school admission open now", "2025 school admission Nigeria",
+      "school admission open now", "current school admission Nigeria",
     ],
     path: "/admissions",
     ogImage: "/og-admissions.jpg",

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,17 +18,37 @@ export default function PrincipalMessage() {
                 boxShadow: "var(--shadow-lg)",
                 border: "3px solid rgba(200, 160, 61, 0.4)",
                 aspectRatio: "1/1",
-                background: "var(--c-primary-dark)",
+                background: "linear-gradient(135deg, #10186B 0%, #1E7FD8 100%)",
               }}
             >
-              {/* Note: User can replace with their image or use the generated executive portrait */}
-              <Image
+              {/* Principal portrait — replace /principal.jpg with actual photo */}
+              <img
                 src="/principal.jpg"
                 alt="Principal, King's Onward College"
-                fill
-                style={{ objectFit: "cover" }}
-                priority
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = "none";
+                }}
               />
+              {/* Fallback when no principal.jpg is available */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.5rem",
+                  zIndex: 0,
+                }}
+              >
+                <svg width="64" height="64" fill="none" stroke="rgba(255,255,255,0.2)" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.3)", fontWeight: 600 }}>Principal's Photo</span>
+              </div>
 
               {/* Gradient overlay for name tag */}
               <div
@@ -44,7 +66,7 @@ export default function PrincipalMessage() {
                   The Principal
                 </h4>
                 <p style={{ fontSize: "0.8rem", color: "var(--c-accent-light)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                  King&apos;s Onward College
+                  King's Onward College
                 </p>
               </div>
             </div>
@@ -95,18 +117,18 @@ export default function PrincipalMessage() {
                 marginBottom: "1.5rem",
               }}
             >
-              &ldquo;At King&apos;s Onward College, education is more than academic instruction; it is the deliberate cultivation of intellect, character, and leadership in every young mind entrusted to our care.&rdquo;
+              "At King's Onward College, education is more than academic instruction; it is the deliberate cultivation of intellect, character, and leadership in every young mind entrusted to our care."
             </blockquote>
 
             <div style={{ color: "var(--c-text-muted)", fontSize: "0.95rem", lineHeight: 1.7, display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2rem" }}>
               <p>
-                Dear Parents, Guardians, and Esteemed Visitors, it gives me great joy to welcome you to King&apos;s Onward College. For over 15 years, our commitment has remained steadfast: providing an inspiring environment where pupils from Nursery through Secondary school are empowered to achieve greatness.
+                Dear Parents, Guardians, and Esteemed Visitors, it gives me great joy to welcome you to King's Onward College. For over 15 years, our commitment has remained steadfast: providing an inspiring environment where pupils from Nursery through Secondary school are empowered to achieve greatness.
               </p>
               <p>
                 We believe that every child has boundless potential waiting to be unlocked. Through our dedicated staff, modern curriculum, well-equipped science and computer laboratories, and strong moral guidance, we nurture students who are confident, resilient, and academically prepared for WAEC, NECO, JAMB, and higher education.
               </p>
               <p>
-                We invite you to partner with us in shaping your child&apos;s future.
+                We invite you to partner with us in shaping your child's future.
               </p>
             </div>
 
@@ -117,7 +139,7 @@ export default function PrincipalMessage() {
                   The Principal & Head of School
                 </h4>
                 <p style={{ fontSize: "0.8rem", color: "var(--c-text-muted)" }}>
-                  King&apos;s Onward College, Benin City
+                  King's Onward College, Benin City
                 </p>
               </div>
 

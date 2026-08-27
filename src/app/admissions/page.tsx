@@ -108,8 +108,8 @@ export default function AdmissionsPage() {
           <h1 className="hero-heading" style={{ fontSize: "2.75rem", marginBottom: "0.75rem" }}>
             Join Our <span style={{ color: "var(--c-accent-light)" }}>Family</span>
           </h1>
-          <p className="hero-lead" style={{ maxWidth: "580px" }}>
-            Admission is currently open for the 2025/2026 academic session. Secure your child&apos;s educational future today.
+          <p className="hero-lead" style={{ maxWidth: "580px", margin: "0 auto" }}>
+            Admissions are currently ongoing. Secure your child&apos;s educational future today and give them the foundation for greatness.
           </p>
         </div>
       </section>

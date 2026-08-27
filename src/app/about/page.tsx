@@ -78,7 +78,7 @@ export default function AboutPage() {
           <h1 className="hero-heading" style={{ fontSize: "2.75rem", marginBottom: "0.75rem" }}>
             Our <span style={{ color: "var(--c-accent-light)" }}>Story</span>
           </h1>
-          <p className="hero-lead" style={{ maxWidth: "550px" }}>
+          <p className="hero-lead" style={{ maxWidth: "550px", margin: "0 auto" }}>
             Discover the passion, vision, and dedication behind King&apos;s Onward College.
           </p>
         </div>

@@ -38,7 +38,7 @@ export default function ContactPage() {
           <h1 className="hero-heading" style={{ fontSize: "2.75rem", marginBottom: "0.75rem" }}>
             Get In <span style={{ color: "var(--c-accent-light)" }}>Touch</span>
           </h1>
-          <p className="hero-lead" style={{ maxWidth: "580px" }}>
+          <p className="hero-lead" style={{ maxWidth: "580px", margin: "0 auto" }}>
             We would love to hear from you. Reach out for admissions, general enquiries, or to schedule a campus tour.
           </p>
         </div>

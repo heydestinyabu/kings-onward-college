@@ -82,7 +82,7 @@ export default function AcademicsPage() {
           <h1 className="hero-heading" style={{ fontSize: "2.75rem", marginBottom: "0.75rem" }}>
             Our Academic <span style={{ color: "var(--c-accent-light)" }}>Programs</span>
           </h1>
-          <p className="hero-lead" style={{ maxWidth: "580px" }}>
+          <p className="hero-lead" style={{ maxWidth: "580px", margin: "0 auto" }}>
             A rigorous and balanced curriculum designed to unlock every child&apos;s fullest potential.
           </p>
         </div>

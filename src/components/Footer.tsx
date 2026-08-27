@@ -74,7 +74,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
-              <div className="logo-badge" style={{ width: "40px", height: "40px", border: "2px solid var(--c-accent)" }}>
+              <div className="logo-badge" style={{ position: "relative", width: "40px", height: "40px", border: "2px solid var(--c-accent)" }}>
                 <Image src="/logo.png" alt="Logo" fill style={{ objectFit: "cover" }} />
               </div>
               <div className="brand-text-block">

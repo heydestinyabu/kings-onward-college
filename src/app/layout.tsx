@@ -11,6 +11,7 @@ import {
   getLocalBusinessJsonLd,
 } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
+import WhatsAppFab from "@/components/WhatsAppFab";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -129,6 +130,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <WhatsAppFab />
       </body>
     </html>
   );

@@ -38,7 +38,7 @@ export default function Header() {
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
               <span>Benin City, Edo State</span>
-              <span style={{ color: "var(--accent-sky)", fontWeight: 700 }}>• Admission 2025/2026</span>
+              <span style={{ color: "var(--c-accent-light)", fontWeight: 700 }}>• Admissions Currently Ongoing</span>
             </div>
           </div>
         </div>

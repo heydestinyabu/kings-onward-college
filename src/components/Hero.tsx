@@ -15,7 +15,7 @@ export default function Hero() {
           width: "500px",
           height: "500px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(63, 193, 240, 0.18) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(200, 160, 61, 0.12) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -27,7 +27,7 @@ export default function Hero() {
           width: "500px",
           height: "500px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(30, 127, 216, 0.25) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(30, 127, 216, 0.15) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -41,24 +41,24 @@ export default function Hero() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                background: "rgba(63, 193, 240, 0.15)",
-                border: "1px solid rgba(63, 193, 240, 0.35)",
+                background: "rgba(200, 160, 61, 0.15)",
+                border: "1px solid rgba(200, 160, 61, 0.4)",
                 padding: "0.4rem 1rem",
                 borderRadius: "9999px",
                 fontSize: "0.8125rem",
                 fontWeight: 700,
-                color: "var(--accent-sky)",
+                color: "var(--c-accent-light)",
                 marginBottom: "1.25rem",
               }}
             >
-              <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--accent-sky)", display: "inline-block" }} />
-              <span>Admission Open for 2025/2026 Academic Session</span>
+              <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--c-accent-light)", display: "inline-block" }} />
+              <span>Admissions Currently Ongoing — Enroll Now</span>
             </div>
 
             <h1 className="hero-heading">
               Nurturing Minds,
               <br />
-              <span style={{ color: "var(--accent-sky)" }}>Building Futures</span>
+              <span style={{ color: "var(--c-accent-light)" }}>Building Futures</span>
             </h1>
 
             <p className="hero-lead">
@@ -86,7 +86,7 @@ export default function Hero() {
                 { number: "98%", label: "Exam Success Rate" },
               ].map((stat) => (
                 <div key={stat.label} className="hero-stat-card">
-                  <div className="hero-stat-val">{stat.number}</div>
+                  <div className="hero-stat-val" style={{ color: "var(--c-accent-light)" }}>{stat.number}</div>
                   <div className="hero-stat-desc">{stat.label}</div>
                 </div>
               ))}
@@ -97,9 +97,6 @@ export default function Hero() {
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <div
               style={{
-                position: "relative",
-                width: "280px",
-                height: "320px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -110,7 +107,8 @@ export default function Hero() {
               <Image
                 src="/logo.png"
                 alt="King's Onward College Crest"
-                fill
+                width={380}
+                height={400}
                 style={{ objectFit: "contain" }}
                 priority
               />
