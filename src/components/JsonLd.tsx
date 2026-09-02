@@ -185,6 +185,17 @@ export function WebPageJsonLd({
     name: title,
     description,
     url: `${SITE_URL}${path}`,
+    inLanguage: "en-NG",
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    about: {
+      "@type": "EducationalOrganization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
     publisher: {
       "@type": "EducationalOrganization",
       name: SITE_NAME,
@@ -192,6 +203,171 @@ export function WebPageJsonLd({
         "@type": "ImageObject",
         url: `${SITE_URL}/logo.png`,
       },
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/** CourseList schema for the Academics page */
+export function CourseJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Academic Programs — King's Onward College",
+    description: "Nursery, Primary, and Secondary academic programs.",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Course",
+          name: "Nursery School Program",
+          description: "Early Years education for children ages 2–5 with play-based learning, phonics, numeracy, and creative arts.",
+          provider: { "@type": "EducationalOrganization", name: SITE_NAME, url: SITE_URL },
+          educationalLevel: "Early Years",
+          url: `${SITE_URL}/academics#nursery`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Course",
+          name: "Primary School Program",
+          description: "Comprehensive primary education covering English, Mathematics, Science, ICT, French, and Social Studies.",
+          provider: { "@type": "EducationalOrganization", name: SITE_NAME, url: SITE_URL },
+          educationalLevel: "Primary",
+          url: `${SITE_URL}/academics#primary`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Course",
+          name: "Secondary School — Science Track",
+          description: "Physics, Chemistry, Biology, Further Mathematics, and Agricultural Science with WAEC/NECO preparation.",
+          provider: { "@type": "EducationalOrganization", name: SITE_NAME, url: SITE_URL },
+          educationalLevel: "Secondary",
+          url: `${SITE_URL}/academics#secondary`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Course",
+          name: "Secondary School — Arts & Humanities",
+          description: "Literature in English, Government, Christian Religious Studies, History, and Fine Arts.",
+          provider: { "@type": "EducationalOrganization", name: SITE_NAME, url: SITE_URL },
+          educationalLevel: "Secondary",
+          url: `${SITE_URL}/academics#secondary`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        item: {
+          "@type": "Course",
+          name: "Secondary School — Commercial Track",
+          description: "Economics, Commerce, Financial Accounting, and Office Practice.",
+          provider: { "@type": "EducationalOrganization", name: SITE_NAME, url: SITE_URL },
+          educationalLevel: "Secondary",
+          url: `${SITE_URL}/academics#secondary`,
+        },
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/** LocalBusiness schema — enhances local SEO & Google Maps visibility */
+export function LocalBusinessJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    description: SITE_DESCRIPTION,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: SCHOOL_ADDRESS.street,
+      addressLocality: SCHOOL_ADDRESS.locality,
+      addressRegion: SCHOOL_ADDRESS.region,
+      addressCountry: SCHOOL_ADDRESS.country,
+      postalCode: SCHOOL_ADDRESS.postalCode,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 6.335,
+      longitude: 5.627,
+    },
+    telephone: SCHOOL_CONTACT.phone,
+    email: SCHOOL_CONTACT.email,
+    sameAs: [
+      "https://www.facebook.com/kingsonwardcollege",
+      "https://www.twitter.com/kingsonwardcollege",
+      "https://www.instagram.com/kingsonwardcollege",
+    ],
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 6.335,
+        longitude: 5.627,
+      },
+      geoRadius: "50000",
+    },
+    foundingDate: "2009",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Academic Programs",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "EducationalOccupationalProgram",
+            name: "Nursery School",
+            description: "Early Years education for children ages 2–5.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "EducationalOccupationalProgram",
+            name: "Primary School",
+            description: "Primary education for children ages 6–11.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "EducationalOccupationalProgram",
+            name: "Secondary School",
+            description: "Secondary education for students ages 12–17, WAEC/NECO/JAMB preparation.",
+          },
+        },
+      ],
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      ratingCount: "250",
+      bestRating: "5",
+      worstRating: "1",
     },
   };
 

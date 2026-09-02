@@ -1,21 +1,15 @@
 const testimonials = [
   {
-    name: "Mrs. Omoregie",
-    role: "Parent",
+    role: "JSS 1 Learner Parent",
     text: "King's Onward College has been a blessing to our family. My children have grown academically and morally. The teachers truly care about each child's individual progress.",
-    initials: "MO",
   },
   {
-    name: "Mr. & Mrs. Igbinosa",
-    role: "Parents",
+    role: "Primary 4 Learner Parent",
     text: "We moved our son from another school and the transformation has been remarkable. The discipline and quality of teaching here are second to none in Benin City.",
-    initials: "MI",
   },
   {
-    name: "Mrs. Aideyan",
-    role: "Parent",
+    role: "Nursery 2 Learner Parent",
     text: "The school's approach to early childhood education is outstanding. My daughter loves going to school every day and has developed exceptional confidence.",
-    initials: "MA",
   },
 ];
 
@@ -39,8 +33,8 @@ export default function Testimonials() {
 
         {/* Testimonials Grid */}
         <div className="testimonials-grid">
-          {testimonials.map((t) => (
-            <div key={t.name} className="testimonial-box">
+          {testimonials.map((t, i) => (
+            <div key={i} className="testimonial-box">
               {/* Quote SVG */}
               <div style={{ marginBottom: "1rem", color: "var(--c-accent-light)" }}>
                 <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
@@ -51,9 +45,7 @@ export default function Testimonials() {
               <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
 
               <div className="testimonial-author">
-                <div className="author-avatar">{t.initials}</div>
                 <div>
-                  <div className="author-name">{t.name}</div>
                   <div className="author-role">{t.role}</div>
                 </div>
               </div>

@@ -21,6 +21,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             : page.path === "/about"
               ? 0.85
               : 0.8,
+    images: page.ogImage
+      ? [`${SITE_URL}${page.ogImage}`]
+      : undefined,
   }));
 
   return staticPages;

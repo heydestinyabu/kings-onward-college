@@ -20,6 +20,124 @@ export const SCHOOL_CONTACT = {
   email: "info@kingsonwardcollege.edu.ng",
 };
 
+// ═══════════════════════════════════════════════════════════════
+// FAQ Content — Optimised for Google Rich Results (FAQ Snippets)
+// Each page has 5+ questions to maximise snippet eligibility.
+// ═══════════════════════════════════════════════════════════════
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export const admissionsFaqs: FAQItem[] = [
+  {
+    question: "Is admission currently open at King's Onward College?",
+    answer: "Yes! Admissions are currently ongoing for Nursery, Primary, and Secondary levels for the current academic session. Spaces are limited — we encourage early application.",
+  },
+  {
+    question: "What age groups does King's Onward College accept?",
+    answer: "We accept children from age 2 in our Nursery section, through Primary (ages 6–11), and Secondary school (ages 12–17). Each level has age-appropriate entry requirements.",
+  },
+  {
+    question: "How do I apply for admission?",
+    answer: "You can obtain an admission form from our administrative office on campus or apply online through our Admissions page. Fill out the form, submit the required documents (birth certificate, passport photographs, previous school reports), and your child will sit for an entrance assessment.",
+  },
+  {
+    question: "What documents are needed for admission?",
+    answer: "Required documents include: a completed application form, birth certificate or statutory declaration of age, 4 recent colour passport photographs, previous academic report cards, transfer certificate (if applicable), immunisation/medical records for Early Years, and a valid parent/guardian identification.",
+  },
+  {
+    question: "How much are the school fees?",
+    answer: "Our fees are affordable and competitive compared to other top private schools in Benin City. Fees vary by level (Nursery, Primary, Secondary). Please contact our admissions office or visit our Admissions page for the current fee schedule and payment plan options.",
+  },
+  {
+    question: "Does the school offer WAEC and NECO preparation?",
+    answer: "Yes. Our Secondary school programme includes structured WAEC, NECO, and JAMB preparation with experienced teachers, past-question drills, and mock examinations to ensure our students achieve excellent results.",
+  },
+  {
+    question: "Is there a school bus service?",
+    answer: "Yes, King's Onward College provides a safe and reliable school bus service covering major routes across Benin City. Bus availability may vary by zone — please contact us for details.",
+  },
+  {
+    question: "Can I visit the campus before enrolling my child?",
+    answer: "Absolutely! We welcome prospective parents and guardians to schedule a campus tour. Contact us by phone, email, or through our Contact page to book a convenient time.",
+  },
+];
+
+export const academicsFaqs: FAQItem[] = [
+  {
+    question: "What academic levels does King's Onward College offer?",
+    answer: "We offer three levels: Nursery (Early Years, ages 2–5), Primary (ages 6–11), and Secondary (ages 12–17). Each level follows a carefully designed curriculum aligned with Nigerian national standards.",
+  },
+  {
+    question: "What subjects are taught in the Nursery section?",
+    answer: "Our Nursery curriculum includes Phonics & Letter Recognition, Number Readiness & Counting, Creative Arts & Drawing, Social Habits & Manners, Music, Rhymes & Stories, Physical & Health Education, Nature Study & Discovery, and Colouring & Handwriting Practice.",
+  },
+  {
+    question: "What science subjects are offered at the secondary level?",
+    answer: "Our Science track includes Physics, Chemistry, Biology, Further Mathematics, and Agricultural Science. These are taught with hands-on laboratory practicals and are aligned with WAEC and NECO syllabi.",
+  },
+  {
+    question: "Does the school prepare students for JAMB and university admission?",
+    answer: "Yes. We provide dedicated JAMB coaching, UTME preparation, and career mentorship for senior secondary students. Our graduates gain admission into top universities across Nigeria and abroad.",
+  },
+  {
+    question: "Are there extracurricular activities and clubs?",
+    answer: "Yes! Students can participate in Inter-house Sports, Debate & Quiz Competitions, Cultural Day, Science & Art Exhibitions, Excursions, Music & Drama Club, Press Club, and JETS Club (Science & Technology).",
+  },
+  {
+    question: "Does the school have a computer/ICT lab?",
+    answer: "Yes, we have a fully equipped ICT Suite where students learn computer Studies, digital literacy, and basic programming skills — integrated into the curriculum from Primary level.",
+  },
+  {
+    question: "What is the teacher-to-student ratio?",
+    answer: "We maintain small class sizes with a low teacher-to-student ratio to ensure personalised attention, better classroom engagement, and stronger academic outcomes for every child.",
+  },
+];
+
+export const contactFaqs: FAQItem[] = [
+  {
+    question: "Where is King's Onward College located?",
+    answer: "King's Onward College is located in Benin City, Edo State, Nigeria. Our campus is easily accessible from major parts of the city. You can find us on Google Maps on our Contact page.",
+  },
+  {
+    question: "What are the school's operating hours?",
+    answer: "Our administrative office is open Monday to Friday, 8:00 AM to 4:00 PM. School activities run from 7:30 AM to 3:30 PM on weekdays. For weekend enquiries, please call ahead.",
+  },
+  {
+    question: "How can I contact the school for enquiries?",
+    answer: "You can reach us by phone at +234-XXX-XXX-XXXX, by email at info@kingsonwardcollege.edu.ng, through the contact form on our website, or by visiting our campus in Benin City. We also respond to WhatsApp messages.",
+  },
+  {
+    question: "Can I schedule a campus tour?",
+    answer: "Yes! We encourage prospective parents to visit our campus. Contact us via phone, email, or our online contact form to schedule a tour at a time that works for you.",
+  },
+  {
+    question: "Does the school have a social media presence?",
+    answer: "Yes, you can follow King's Onward College on Facebook, Instagram, and Twitter/X for updates on school events, achievements, and admissions announcements.",
+  },
+];
+
+export const aboutFaqs: FAQItem[] = [
+  {
+    question: "When was King's Onward College established?",
+    answer: "King's Onward College was established in 2009 with a mission to provide quality, value-driven education in Benin City, Edo State, Nigeria.",
+  },
+  {
+    question: "What is the school's mission?",
+    answer: "Our mission is to provide holistic, world-class education that nurtures every child intellectually, morally, and socially — preparing them to become future leaders of excellence.",
+  },
+  {
+    question: "What are the core values of the school?",
+    answer: "Our four core values are Excellence, Integrity, Innovation, and Discipline. These values guide everything we do — from teaching to character development and community engagement.",
+  },
+  {
+    question: "What makes King's Onward College different from other schools?",
+    answer: "We combine academic rigor with character formation, maintain small class sizes for personalised attention, use modern teaching methods and technology, and provide a safe, nurturing Christian environment for holistic child development.",
+  },
+];
+
 export interface PageSEO {
   title: string;
   description: string;
@@ -194,5 +312,140 @@ export function getBreadcrumbJsonLd(
       name: item.name,
       item: item.url,
     })),
+  };
+}
+
+export function getFAQPageJsonLd(faqs: FAQItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+export function getCourseJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Academic Programs — King's Onward College",
+    description: "Nursery, Primary, and Secondary academic programs offered at King's Onward College, Benin City.",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Course",
+          name: "Nursery School Program",
+          description: "Early Years education for children ages 2–5 with play-based learning, phonics, numeracy, and creative arts.",
+          provider: {
+            "@type": "EducationalOrganization",
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
+          educationalLevel: "Early Years",
+          url: `${SITE_URL}/academics#nursery`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Course",
+          name: "Primary School Program",
+          description: "Comprehensive primary education covering English, Mathematics, Science, ICT, French, and Social Studies.",
+          provider: {
+            "@type": "EducationalOrganization",
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
+          educationalLevel: "Primary",
+          url: `${SITE_URL}/academics#primary`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Course",
+          name: "Secondary School — Science Track",
+          description: "Physics, Chemistry, Biology, Further Mathematics, and Agricultural Science with WAEC/NECO preparation.",
+          provider: {
+            "@type": "EducationalOrganization",
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
+          educationalLevel: "Secondary",
+          url: `${SITE_URL}/academics#secondary`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Course",
+          name: "Secondary School — Arts & Humanities",
+          description: "Literature in English, Government, Christian Religious Studies, History, and Fine Arts.",
+          provider: {
+            "@type": "EducationalOrganization",
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
+          educationalLevel: "Secondary",
+          url: `${SITE_URL}/academics#secondary`,
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        item: {
+          "@type": "Course",
+          name: "Secondary School — Commercial Track",
+          description: "Economics, Commerce, Financial Accounting, and Office Practice.",
+          provider: {
+            "@type": "EducationalOrganization",
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
+          educationalLevel: "Secondary",
+          url: `${SITE_URL}/academics#secondary`,
+        },
+      },
+    ],
+  };
+}
+
+export function getWebPageJsonLd(title: string, description: string, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: `${SITE_URL}${path}`,
+    inLanguage: "en-NG",
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    about: {
+      "@type": "EducationalOrganization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "EducationalOrganization",
+      name: SITE_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.png`,
+      },
+    },
   };
 }

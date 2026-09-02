@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { SITE_URL, pages } from "@/lib/seo";
-import { SchoolJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import { SITE_URL, pages, aboutFaqs } from "@/lib/seo";
+import { SchoolJsonLd, BreadcrumbJsonLd, FAQJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 
 const seo = pages.about;
 
@@ -162,6 +162,12 @@ export default function AboutPage() {
           { name: "About Us", url: "/about" },
         ]}
       />
+      <FAQJsonLd faqs={aboutFaqs} />
+      <WebPageJsonLd
+        title={seo.title}
+        description={seo.description}
+        path={seo.path}
+      />
 
       {/* Core Values */}
       <section className="section-padding" style={{ backgroundColor: "#FFFFFF" }}>
@@ -181,6 +187,31 @@ export default function AboutPage() {
                 <h3 className="reason-title">{v.title}</h3>
                 <p className="reason-desc">{v.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section for Rich Snippets */}
+      <section className="section-padding" style={{ backgroundColor: "var(--c-bg-light)" }}>
+        <div className="site-container">
+          <div className="section-header">
+            <span className="section-tag">Got Questions?</span>
+            <div className="gold-divider" />
+            <h2 className="section-title">
+              Frequently Asked <span className="text-gold">Questions</span>
+            </h2>
+          </div>
+          <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {aboutFaqs.map((faq) => (
+              <details key={faq.question} style={{ background: "#FFFFFF", borderRadius: "12px", padding: "1.25rem 1.5rem", border: "1px solid var(--c-border)" }}>
+                <summary style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--c-primary)", cursor: "pointer", listStyle: "none" }}>
+                  {faq.question}
+                </summary>
+                <p style={{ marginTop: "0.75rem", fontSize: "0.9rem", color: "var(--c-text-muted)", lineHeight: 1.7 }}>
+                  {faq.answer}
+                </p>
+              </details>
             ))}
           </div>
         </div>

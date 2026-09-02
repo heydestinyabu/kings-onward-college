@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { SITE_URL, pages } from "@/lib/seo";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { SITE_URL, pages, contactFaqs } from "@/lib/seo";
+import { BreadcrumbJsonLd, FAQJsonLd, LocalBusinessJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 
 const seo = pages.contact;
 
@@ -114,13 +114,6 @@ export default function ContactPage() {
                 Fill in the details below and an administrative officer will respond shortly.
               </p>
 
-              <BreadcrumbJsonLd
-                items={[
-                  { name: "Home", url: "/" },
-                  { name: "Contact Us", url: "/contact" },
-                ]}
-              />
-
               <form style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                   <div>
@@ -195,6 +188,46 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section for Rich Snippets */}
+      <section className="section-padding" style={{ backgroundColor: "var(--c-bg-light)" }}>
+        <div className="site-container">
+          <div className="section-header">
+            <span className="section-tag">Got Questions?</span>
+            <div className="gold-divider" />
+            <h2 className="section-title">
+              Frequently Asked <span className="text-gold">Questions</span>
+            </h2>
+          </div>
+          <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {contactFaqs.map((faq) => (
+              <details key={faq.question} style={{ background: "#FFFFFF", borderRadius: "12px", padding: "1.25rem 1.5rem", border: "1px solid var(--c-border)" }}>
+                <summary style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--c-primary)", cursor: "pointer", listStyle: "none" }}>
+                  {faq.question}
+                </summary>
+                <p style={{ marginTop: "0.75rem", fontSize: "0.9rem", color: "var(--c-text-muted)", lineHeight: 1.7 }}>
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JSON-LD Structured Data */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Contact Us", url: "/contact" },
+        ]}
+      />
+      <FAQJsonLd faqs={contactFaqs} />
+      <LocalBusinessJsonLd />
+      <WebPageJsonLd
+        title={seo.title}
+        description={seo.description}
+        path={seo.path}
+      />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL, pages } from "@/lib/seo";
-import { FAQJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import { SITE_URL, pages, academicsFaqs } from "@/lib/seo";
+import { FAQJsonLd, BreadcrumbJsonLd, CourseJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 
 const seo = pages.academics;
 
@@ -284,12 +284,44 @@ export default function AcademicsPage() {
         </div>
       </section>
 
+      {/* FAQ Section for Rich Snippets */}
+      <section className="section-padding" style={{ backgroundColor: "#FFFFFF" }}>
+        <div className="site-container">
+          <div className="section-header">
+            <span className="section-tag">Got Questions?</span>
+            <div className="gold-divider" />
+            <h2 className="section-title">
+              Frequently Asked <span className="text-gold">Questions</span>
+            </h2>
+          </div>
+          <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {academicsFaqs.map((faq) => (
+              <details key={faq.question} style={{ background: "var(--c-bg-light)", borderRadius: "12px", padding: "1.25rem 1.5rem", border: "1px solid var(--c-border)" }}>
+                <summary style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--c-primary)", cursor: "pointer", listStyle: "none" }}>
+                  {faq.question}
+                </summary>
+                <p style={{ marginTop: "0.75rem", fontSize: "0.9rem", color: "var(--c-text-muted)", lineHeight: 1.7 }}>
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* JSON-LD Structured Data */}
       <BreadcrumbJsonLd
         items={[
           { name: "Home", url: "/" },
           { name: "Academics", url: "/academics" },
         ]}
+      />
+      <FAQJsonLd faqs={academicsFaqs} />
+      <CourseJsonLd />
+      <WebPageJsonLd
+        title={seo.title}
+        description={seo.description}
+        path={seo.path}
       />
     </>
   );

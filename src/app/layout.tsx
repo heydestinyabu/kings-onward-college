@@ -10,7 +10,9 @@ import {
   getWebsiteJsonLd,
   getLocalBusinessJsonLd,
 } from "@/lib/seo";
-import JsonLd from "@/components/JsonLd";
+import JsonLd, {
+  LocalBusinessJsonLd,
+} from "@/components/JsonLd";
 import WhatsAppFab from "@/components/WhatsAppFab";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -30,6 +32,7 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
+  category: "education",
   formatDetection: {
     telephone: true,
     email: true,
@@ -120,12 +123,17 @@ export default function RootLayout({
         <meta name="geo.placename" content="Benin City" />
         <meta name="geo.position" content="6.335;5.627" />
         <meta name="ICBM" content="6.335, 5.627" />
+        <meta name="application-name" content={SITE_NAME} />
+        <meta name="apple-mobile-web-app-title" content="KOC" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
       <body>
         {/* Global Structured Data — School + Website + LocalBusiness */}
         <JsonLd data={getSchoolJsonLd()} />
         <JsonLd data={getWebsiteJsonLd()} />
         <JsonLd data={getLocalBusinessJsonLd()} />
+        <LocalBusinessJsonLd />
 
         <Header />
         <main>{children}</main>
